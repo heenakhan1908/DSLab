@@ -8,70 +8,79 @@ char a[30];
  }stack;
  
  void push(stack*,char c);
+ int pop(stack* s);
+ int operation(int num1,int num2,char opr)
+ int evaluate(char p[])
  
- char pop(stack* s);
  
- int operation(int num 1;int num 2;char opr)
-int evaluate(char pop[])
+ int  evaluate (char  post[])
+ {
+ char opr;
+ stack s1;
+ int e1,e2,result,i; //i declared for counter
+ s1.top=-1;
+ for(i=0;post[i]!='\0';i++)
+ {
+
+		 if(isdigit(post[i]))
+					push(&s,opr-'0');
+		else
+		{
+			e1=pop(&s);
+			e2=pop(&s);
+			result=operation(e1,e2,post[i]);
+			push(result,&s1);
+		}
+}
+return pop(&s);
+}
+
+
+
+int operation(char opr)
+{
 switch(opr)
 {
-case'+': 
-return num1+num2;
+case'+':return num1+num2;
 break;
-case'-':
-return num1-num2;
+case'-':return num1-num2;
 break;
-case'*':
-return num1*num2;
+case'*':return num1*num2;
 break;
-case'/'
-return num1/num2;
+case'/':return num1/num2;
 break;
 }
- int main()
+}
+
+ void push(stack *s,char opr)
+{
+	s->top++;
+	s->a[s->top]=opr;
+}
+
+int pop(stack *s)
+{
+	if (s->top==-1)
+	{
+		printf("stack is empty\n");
+		return 0;
+    }
+    else
+    {
+		char data=s->a[s->top--];
+		return data;
+    }
+}
+
+
+
+
+int  main()
  {
  char postfix[30];
  printf("\nENTER postfix EXPRESSION\n");
  scanf("%s",postfix);
- evaluate(infix,postfix);
  printf("\n\nevaluation ofPOSTFIX EXPRESSION\n=%d",evaluate(postfix));
  return 0;
  }
  
- int convert(char post[])
- {
- char opr;//declare result variable
- stack s1;
- int e1,e2,res,i; //i declared for counter
-
- s1.top=-1;
- for(i=0;in[i]!='\0';i++)
- {
- if(isdigit(in[i]))
-   post[j++]=in[i];
-   if(in[i]=='(')
-   push(&s1,in[i]);
-   if(in[i]=='+'||in[i]=='-'||in[i]=='/'||in[i]=='*')
-   {
-   if(s1.top!=-1)
-   {
-   opr=pop(&s1);
-   while(priority(opr)>=priority(in[i]))
-   {
-   post[j++]=opr;
-   opr=pop(&s1);
-   }
-   push(&s1,opr);
-   push(&s1,in[i]);
-   }
-   if(in[i]==')')
-{
-opr=pop(&s1);
-while(opr!=')')
-{
-post[j++]=opr;
-opr=pop(&s1)
-}
-}
-}
-while(s1.top!=-1)
