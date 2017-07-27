@@ -7,33 +7,47 @@ char a[30];
  int top;
  }stack;
  
- void push(stack*,char);
+ void push(stack*,char c);
  
- char pop(stack*);
+ char pop(stack* s);
  
- void convert(char[],char[]);
- 
- int priority(char);
- 
+ int operation(int num 1;int num 2;char opr)
+int evaluate(char pop[])
+switch(opr)
+{
+case'+': 
+return num1+num2;
+break;
+case'-':
+return num1-num2;
+break;
+case'*':
+return num1*num2;
+break;
+case'/'
+return num1/num2;
+break;
+}
  int main()
  {
- char infix[30],postfix[30];
- printf("\nENTER INFIX EXPRESSION\n");
- scanf("%s",infix);
- convert(infix,postfix);
- printf("\n\nPOSTFIX EXPRESSION\n%s",postfix);
+ char postfix[30];
+ printf("\nENTER postfix EXPRESSION\n");
+ scanf("%s",postfix);
+ evaluate(infix,postfix);
+ printf("\n\nevaluation ofPOSTFIX EXPRESSION\n=%d",evaluate(postfix));
  return 0;
  }
  
- void convert(char in[],char post[])
+ int convert(char post[])
  {
- char opr;
+ char opr;//declare result variable
  stack s1;
- int j=0,i;
+ int e1,e2,res,i; //i declared for counter
+
  s1.top=-1;
  for(i=0;in[i]!='\0';i++)
  {
- if(asalpha(in[i]))
+ if(isdigit(in[i]))
    post[j++]=in[i];
    if(in[i]=='(')
    push(&s1,in[i]);
