@@ -1,13 +1,13 @@
 #include<stdio.h>
 #include<ctype.h> //for isalpha() function
 
-typedef struct conversion
+typedef struct balanced
 {
 char a[30];
  int top,i,c;
  }stack;
  
- void push(stack*,char c);
+ void push(stack *s ,char c);
  char pop(stack* s);
 void checkcountinuity(char exp[]);
 int isMatchingpair(char left,char right);
@@ -18,45 +18,48 @@ int isMatchingpair(char left,char right)
  switch (left)
 {
   case'(': if(right==')')
-  return 1;
+   return 1;
   else 
-  return 0;
+   return 0;
   break;
   case'{': if(right=='}')
-  return 1;
+   return 1;
   else
-   return 0;
+    return 0;
   break;
   case'[' : if(right==']')
-  return 1;
+    return 1;
   else
-   return 0;
+    return 0;
+  default:
+		 return 0;
    
 }
 }
 
 void checkcountinuity(char exp[])
 {
-int i,c;
-
+int i;
+char c;
 stack s;
 s.top==-1;
 for (i=0;exp[i]!='\0';i++)
 {
-if (exp[i]=='{'||'('||'[')
+ if (exp[i]=='{'||'('||'[')
  push(&s,exp[i]);
  else
  {
 	 if(s.top==-1)
- printf("expression is invalid");
+         printf("expression is invalid");
  else
-return pop(&s);
+        return pop(&s);
+	 
  if (isMatchingpair(c,exp[i]))
- continue;
+      continue;
  else
  {
- printf("expression is invalid");
- return;
+    printf("expression is invalid");
+    return;
 }
 }
 }
@@ -76,8 +79,16 @@ printf("expression is invalid");
 
 void push(stack *s,char opr)
 {
+	if(s->top>29)
+	{
+		printf("stack is full");
+		return;
+	}
+	else
+	{
 	s->top++;
 	s->a[s->top]=opr;
+}
 }
 
 char pop(stack *s)
@@ -97,12 +108,12 @@ char pop(stack *s)
 
 
 
-int  main()s
+int  main()
  {
- char exp[30];
+ char expression[30];
  printf("\nENTER EXPRESSION CONTAINING ONLY PARANTHESIS\n");
- scanf("%s",exp);
-checkcontinuity(exp[i])
+ scanf("%s",expression);
+checkcontinuity(expression)
  return 0; 
  }
  
