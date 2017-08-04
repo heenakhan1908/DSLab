@@ -7,58 +7,21 @@ char a[30];
  int top;
  }stack;
  
- void push(stack*,char c);
- int pop(stack* s);
- int operation(int num1,int num2,char opr)
- int evaluate(char p[])
- 
- 
- int  evaluate (char  post[])
- {
- char opr;
- stack s1;
- int e1,e2,result,i; //i declared for counter
- s1.top=-1;
- for(i=0;post[i]!='\0';i++)
- {
-
-		 if(isdigit(post[i]))
-					push(&s,opr-'0');
-		else
-		{
-			e1=pop(&s);
-			e2=pop(&s);
-			result=operation(e1,e2,post[i]);
-			push(result,&s1);
-		}
-}
-return pop(&s);
-}
-
-
-
-int operation(char opr)
+void push(stack *s,char opr)
 {
-switch(opr)
-{
-case'+':return num1+num2;
-break;
-case'-':return num1-num2;
-break;
-case'*':return num1*num2;
-break;
-case'/':return num1/num2;
-break;
-}
-}
-
- void push(stack *s,char opr)
-{
+	 if(s->top>29)
+	 {
+		 printf("stack is  full");
+		 return;
+	 }
+	 else
+	 {
 	s->top++;
 	s->a[s->top]=opr;
 }
+ }
 
-int pop(stack *s)
+char pop(stack *s)
 {
 	if (s->top==-1)
 	{
@@ -72,9 +35,46 @@ int pop(stack *s)
     }
 }
 
+int operation(int num1,int num2,char opr)
+{
+switch(opr)
+{
+case'+':return num1+num2;
+break;
+case'-':return num1-num2;
+break;
+case'*':return num1*num2;
+break;
+case'/':return num1/num2;
+break;
+}
+}
+	
+	
+	int  evaluate (char  post[])
+ {
+ char opr;
+ stack s;
+ int e1,e2,result,i=0; //i declared for counter
+ s1.top=-1;
+while(post[i]!='\0')
+{
+	opr=post[i];
+	if(isdigit(opr))
+		push(&s,opr-'0');
+	else
+	{
+		e1=pop(&s);
+		e2=pop(&s);
+		result=operation(e1,e2,opr);
+		push(&s,result);
+	}
+	   i++;
+}
+	  return pop(&s);
+}
 
-
-
+		
 int  main()
  {
  char postfix[30];
