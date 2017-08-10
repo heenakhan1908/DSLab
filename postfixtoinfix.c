@@ -23,13 +23,13 @@ char a[30];
  {
 
 		 if(isdigit(post[i]))
-					push(&s,opr-'0');
+					push(&s1,opr-'0');
 		else
 		{
-			e1=pop(&s);
-			e2=pop(&s);
+			e1=pop(&s1);
+			e2=pop(&s1);
 			result=operation(e1,e2,post[i]);
-			push(result,&s1);
+			push(&s1,result);
 		}
 }
 return pop(&s);
