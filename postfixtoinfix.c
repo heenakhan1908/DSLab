@@ -1,3 +1,8 @@
+/*
+*Description:evaluation of postfix program
+*Author:khan heena
+Roll no:16co04
+*/
 #include<stdio.h>
 #include<ctype.h> //for isalpha() function
 
