@@ -6,8 +6,8 @@ int queue[MAX_SIZE],front=-1,rear=-1;
 
 int isFull()
 {
-	return (((abs(front-rear)%(MAX_SIZE-1)==1)||(abs(front-rear)%(MAX_SIZE-1)==0))&&(front!=-1&&rear!=-1);//queue is full
-	
+	//queue is full
+	return((rear==MAX-SIZE-1&&front==0)||(rear+1==front));
 }
 
 int isEmpty(){
@@ -27,6 +27,8 @@ void insertqueue(int d)
 {
 if(!isFull())
 {
+rear=(rear+1)%(MAX-SIZE);
+queue
 if(isEmpty())
 {
 	front++;
