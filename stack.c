@@ -1,3 +1,8 @@
+/*
+*Description:Program of stack
+*Author:khan heena
+*roll no:16co04
+*/
 #include<stdio.h>
 #include<stdlib.h>
 #define MAX_SIZE 10
