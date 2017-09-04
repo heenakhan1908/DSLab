@@ -1,126 +1,137 @@
-#include<stdio.h>
+/*
+*Description:singly link list program
+*Author:khan heena #include<stdio.h>
+*Roll no:16co04
+*/
+#
 #include<stdlib.h>
 
-typedef struct linked-list{
+typedef struct linked_list{
 	int data;
-	struct linked-list *next;
+	struct linked_list *next;
 }node;
-
 
 void print(node *q)
 {
 	node *ptr;
-	print=q;
-	printf("\n"
+	ptr=q;
+	printf("\n");
 	while(ptr!=NULL)
 	{
 		printf("%d\t",ptr->data);
 		ptr=ptr->next;
 	}
 }
- void insbeg(node **q,int no)
+
+void insbeg(node **q,int no)
 {
 	node *temp,*ptr;
-temp=*q;
-ptr=(node*)malloc(sizeof(node));
-ptr->data=no;
-if(temp==NULL)
- ptr->next=NULL;
-else
- ptr->next=temp;
-*q=ptr;
-printf("\nELEMENTS OF LINKED LIST AFTER INSERTION\n");
-printf(*q);
+	temp=*q;
+	ptr=(node*)malloc(sizeof(node));
+	ptr->data=no;
+	if(temp==NULL)
+		ptr->next=NULL;
+	else
+		ptr->next=temp;
+	*q=ptr;
+	printf("\nELEMENTS OF LINKLIST AFTER INSERTION\n");
+	print(*q);
 }
-void insend(node**q,int no)
-{
-node *ptr,*temp;
-ptr=(node*)malloc(sizeof(node));
-ptr->data=no;
-ptr->next=NULL;
-*q=ptr;
-else
-{
-while(temp->next!
 
+void insend(node **q,int no)
+{
+	node *ptr,*temp;
+	ptr=(node*)malloc(sizeof(node));
+	ptr->data=no;
+	ptr->next=NULL;
+	temp=*q;
+	if(temp==NULL)
+		*q=ptr;
+	else
+	{
+		while(temp->next!=NULL)
+			temp=temp->next;
+		temp->next=ptr;
+	}
+	printf("\nELEMENTS OF LINKLIST AFTER INSERTION\n");
+	print(*q);
+}
 void insafter(node *q,int no)
 {
-int loc,k;
-node *temp,*ptr,*old;
-temp=q;
-ptr(node*)malloc(sizeof(node*));
-ptr->data=no;
-printf("enter the location where the no is to be inserted");
-scanf("%d",&loc);
-for(k=1;k<loc;k++)
-{
-if(temp==NULL)
-printf("elements are less than provided location");
-else
-{
-old=temp;
-temp=temp->next;
+	int loc,k;
+	node *temp,*ptr,*old;
+	temp=q;
+	ptr=(node*)malloc(sizeof(node*));
+	ptr->data=no;
+	printf("ENTER LOCATION WHERE THE NO.IS TO BE INSERTED: ");
+	scanf("%d",&loc);
+	for(k=1;k<loc;k++)
+	{
+		if(temp==NULL)
+			printf("\nELEMENTS ARE LESS THAN PROVIDED LOCATION\n");
+		else
+		{
+			old=temp;
+			temp=temp->next;
+		}
+	}
+	ptr->next=temp;
+	old->next=ptr;
+	printf("\nELEMENTS OF LINKLIST AFTER INSERTION\n");
+	print(q);
 }
-}
-ptr->next=temp;
-old->next=ptr;
-printf("elements of linklist after insertion");
-print(q);
-}
-
 void del(node **q,int no)
 {
-int f=0;
-node *old,*temp;
-temp=*q;
-
-while(temp!=NULL)
-{
-if(temp->data==no)
-{
-f=1;
-if(temp==*q)
-*q=temp->next;
-else
-old->next=temp->next;
-free(temp);
-break;
+	int f=0;
+	node *old,*temp;
+	temp=*q;
+	
+	while(temp!=NULL)
+	{
+		if(temp->data==no)
+		{
+			f=1;
+			if(temp==*q)
+				*q=temp->next;
+			else	
+				old->next=temp->next;
+			free(temp);
+			break;
+		}
+		else
+		{
+			old=temp;
+			temp=temp->next;
+		}
+	}
+	
+	if(f==0)
+		printf("\nTHE GIVEN NUMBER IS NOT FOUND\n");
+	
+	printf("\nELEMENTS OF LINKLIST AFTER DELETION\n");
+	print(*q);
 }
-else
+void traverse(node *q)
 {
-old=temp;
-temp=temp->next;
-}
-}
-
-if(f==0)
-printf("\nthe given no. is not found\n");
-printf("\nthe elements of linked list after deletion\n");
-print(*q);
-}
-
-void traverse(node 
-*q)
-{
-printf("\ntraversing linked list\n");
-print(q);
-printf("\nend of link linklist\n");
+	printf("\nTRAVERSING LINKLIST\n\n");
+	print(q);
+	printf("\n\nEND OF LINKLIST\n");
 }
 int main()
 {
-node *start,*ptr,*temp;
-int i,n,j,no,c;
-printf("enter no of nodes: ");
-scanf("%d",&n);
-printf("\nenter node no 1: ");
-start=(node*)malloc(sizeof(node));
-scanf("%d",&start->data);
-temp=start;
-for(i=1;i<n;i++)
-{
-	ptr=(node*)malloc(sizeof(node));
-printf("\nenter node no %d: ",i+1);
-scanf("%d",&ptr->data);
+	node *start,*ptr,*temp;
+	int i,n,j,no,c;
+	printf("ENTER NUMBER OF NODES: ");
+	scanf("%d",&n);
+	printf("\nENTER NODE NUMBER 1: ");
+	start=(node*)malloc(sizeof(node));
+	scanf("%d",&start->data);
+	temp=start;
+	for(i=1;i<n;i++)
+	{
+		ptr=(node*)malloc(sizeof(node));
+		printf("\nENTER NODE NUMBER %d: ",i+1);
+		scanf("%d",&ptr->data);
 		temp->next=ptr;
 		temp=ptr;
 	}
@@ -167,4 +178,7 @@ scanf("%d",&ptr->data);
 			default:
 				printf("\nInvalid Input.");
 				break;		
-
+			}
+		}while(1);	
+	return 0;
+}
