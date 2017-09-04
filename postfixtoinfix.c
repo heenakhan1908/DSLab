@@ -15,8 +15,8 @@ char a[30];
 <<<<<<< HEAD
  void push(stack*,char c);
  int pop(stack* s);
- int operation(int num1,int num2,char opr)
- int evaluate(char p[])
+ int operation(int num1,int num2,char opr);
+ int evaluate(char p[]);
  
  
  int  evaluate (char  post[])
@@ -51,7 +51,6 @@ void push(stack *s,char opr)
 	 {
 	s->top++;
 	s->a[s->top]=opr;
->>>>>>> 430f2b1c9ec33cd6b1c3c5faab610bce90fde24a
 }
  }
 
@@ -71,17 +70,17 @@ char pop(stack *s)
 
 int operation(int num1,int num2,char opr)
 {
-switch(opr)
-{
-case'+':return num1+num2;
-break;
-case'-':return num1-num2;
-break;
-case'*':return num1*num2;
-break;
-case'/':return num1/num2;
-break;
-}
+ switch(opr)
+	{
+	  case'+':return num1+num2;
+	 break;
+	 case'-':return num1-num2;
+	 break;
+	 case'*':return num1*num2;
+	 break;
+	 case'/':return num1/num2;
+	 break;
+	}
 }
 	
 	
