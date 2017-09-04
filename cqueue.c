@@ -1,3 +1,7 @@
+/*Description:circular queue program
+*Author:khan heena
+*roll no:16co04
+*/
 #include<stdio.h>
 #include<stdlib.h>
 #define MAX_SIZE 7
@@ -48,14 +52,14 @@ if(!isFull())
 
 void deletequeue()
 {
-	intd;
+	int d;
 	if (!isEmpty())
 {
 	d=queue[front];
 	if(front==rear)
 		front=rear=-1;
 	else
-		front=(front++)%(MAX_SIZE);
+		front=(front+1)%(MAX_SIZE);
 	printf("the element deleted is %d",d);
 	printf("\n%d-%d",front,rear);		
 }
@@ -73,7 +77,6 @@ int main(){
 		scanf("%d",&choice);	
 		switch(choice){
 			case 1:
-				case 1:
 				printf("\nElements of queue are");
 				display();
 				break;
