@@ -39,7 +39,7 @@ typedef struct conversion
   s1.top=-1;
   for(i=0;in[i]!='\0';i++)
  {
-   if(asalpha(in[i]))
+   if(isalpha(in[i]))
    	post[j++]=in[i];
    if(in[i]=='(')
    	push(&s1,in[i]);

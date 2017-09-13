@@ -11,15 +11,9 @@ typedef struct conversion
 char a[30];
  int top;
  }stack;
+
  
-<<<<<<< HEAD
- void push(stack*,char c);
- int pop(stack* s);
- int operation(int num1,int num2,char opr);
- int evaluate(char p[]);
- 
- 
- int  evaluate (char  post[])
+ int  evaluate(char  post[])
  {
  char opr;
  stack s1;
@@ -39,7 +33,7 @@ char a[30];
 		}
 }
 return pop(&s);
-=======
+}
 void push(stack *s,char opr)
 {
 	 if(s->top>29)
