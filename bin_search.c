@@ -85,7 +85,10 @@ void delete(node *q,int num){
 				return ;
 			}
 			else{
-				if(temp->data==num)
+				if(temp->data==num){
+					if(temp->left==NULL&&temp->right==NULL)
+					free(temp)
+				
 				return ;
 			}
 	else{

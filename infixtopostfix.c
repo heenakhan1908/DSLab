@@ -105,3 +105,19 @@ char pop(stack *s)
 		return data;
     }
 }
+/*
+ENTER INFIX EXPRESSION
+a*(b+C)/d
+stack is empty
+
+
+POSTFIX EXPRESSION
+abC+*d/
+
+------------------
+(program exited with code: 0)
+Press return to continue
+
+
+*/
+
