@@ -85,3 +85,84 @@ int main(){
 	}while(1);
 	return 0;
 }
+/*********OUTPUT*********
+Enter
+1.Peek
+2.Push
+3.Pop
+4.Exit
+Enter your choice: 2
+
+Enter the elment to be inserted: 1
+
+Your element 1 is successfully inserted
+Enter
+1.Peek
+2.Push
+3.Pop
+4.Exit
+Enter your choice: 2
+
+Enter the elment to be inserted: 2
+
+Your element 2 is successfully inserted
+Enter
+1.Peek
+2.Push
+3.Pop
+4.Exit
+Enter your choice: 2
+
+Enter the elment to be inserted: 3
+
+Your element 3 is successfully inserted
+Enter
+1.Peek
+2.Push
+3.Pop
+4.Exit
+Enter your choice: 3
+
+Your element 3 is successfully deleted
+Enter
+1.Peek
+2.Push
+3.Pop
+4.Exit
+Enter your choice: 1
+
+Element at the top of stack is : 2
+Enter
+1.Peek
+2.Push
+3.Pop
+4.Exit
+Enter your choice: 3
+
+Your element 2 is successfully deleted
+Enter
+1.Peek
+2.Push
+3.Pop
+4.Exit
+Enter your choice: 3
+
+Your element 1 is successfully deleted
+Enter
+1.Peek
+2.Push
+3.Pop
+4.Exit
+Enter your choice: 3
+
+Element cannot be deleted. Stack Underflow!
+Enter
+1.Peek
+2.Push
+3.Pop
+4.Exit
+Enter your choice: 4
+
+Process returned 0 (0x0)   execution time : 94.256 s
+Press any key to continue.
+*/
