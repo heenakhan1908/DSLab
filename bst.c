@@ -1,3 +1,9 @@
+/*
+*description:Quick Sort
+*Author:khan heena
+*Roll no:16co04
+*/
+
 #include<stdio.h>
 #include<stdlib.h>
 

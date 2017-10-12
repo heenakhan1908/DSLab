@@ -1,3 +1,9 @@
+/*
+*description:Quick Sort
+*Author:khan heena
+*Roll no:16co04
+*/
+
 #include<stdio.h>
 #include<math.h>
 
@@ -78,4 +84,236 @@ int double_hash(int h,int i){
 	 }
 	 }while(1);
  }
+
+
+
+/*Output
+  Enter the Number to be stored=
+25
+Element of Array are...
+-1	-1	-1	-1	-1	25	-1	-1	-1	-1	 
+  
+Enter the Number to be stored=
+21
+Element of Array are...
+-1	21	-1	-1	-1	25	-1	-1	-1	-1	
+  
+Enter the Number to be stored=
+23
+Element of Array are...
+-1	21	-1	23	-1	25	-1	-1	-1	-1	
+ 
+Enter the Number to be stored=
+45
+collision occured at 5
+ Enter your choice
+1.Quadratic_probing
+2.Double_hash
+3.Linear_probing
+2
+collision occured at 1
+ Enter your choice
+1.Quadratic_probing
+2.Double_hash
+3.Linear_probing
+3
+Element of Array are...
+-1	21	45	23	-1	25	-1	-1	-1	-1	
+  
+Enter the Number to be stored=
+89
+Element of Array are...
+-1	21	45	23	-1	25	-1	-1	-1	89	 
+ 
+Enter the Number to be stored=
+87
+Element of Array are...
+-1	21	45	23	-1	25	-1	87	-1	89	
+  
+Enter the Number to be stored=
+54
+Element of Array are...
+-1	21	45	23	54	25	-1	87	-1	89	 
+ 
+Enter the Number to be stored=
+62
+collision occured at 2
+ Enter your choice
+1.Quadratic_probing
+2.Double_hash
+3.Linear_probing
+1
+collision occured at 3
+ Enter your choice
+1.Quadratic_probing
+2.Double_hash
+3.Linear_probing
+2
+collision occured at 1
+ Enter your choice
+1.Quadratic_probing
+2.Double_hash
+3.Linear_probing
+3
+collision occured at 2
+ Enter your choice
+1.Quadratic_probing
+2.Double_hash
+3.Linear_probing
+1
+Element of Array are...
+-1	21	45	23	54	25	-1	87	62	89	
+  
+Enter the Number to be stored=
+2
+collision occured at 2
+ Enter your choice
+1.Quadratic_probing
+2.Double_hash
+3.Linear_probing
+3
+collision occured at 3
+ Enter your choice
+1.Quadratic_probing
+2.Double_hash
+3.Linear_probing
+2
+collision occured at 1
+ Enter your choice
+1.Quadratic_probing
+2.Double_hash
+3.Linear_probing
+3
+collision occured at 2
+ Enter your choice
+1.Quadratic_probing
+2.Double_hash
+3.Linear_probing
+2
+collision occured at 4
+ Enter your choice
+1.Quadratic_probing
+2.Double_hash
+3.Linear_probing
+1
+collision occured at 9
+ Enter your choice
+1.Quadratic_probing
+2.Double_hash
+3.Linear_probing
+2
+collision occured at 9
+ Enter your choice
+1.Quadratic_probing
+2.Double_hash
+3.Linear_probing
+2
+collision occured at 9
+ Enter your choice
+1.Quadratic_probing
+2.Double_hash
+3.Linear_probing
+3
+Element of Array are...
+2	21	45	23	54	25	-1	87	62	89	
+ 
+ Enter the Number to be stored=
+12
+collision occured at 2
+ Enter your choice
+1.Quadratic_probing
+2.Double_hash
+3.Linear_probing
+3
+collision occured at 3
+ Enter your choice
+1.Quadratic_probing
+2.Double_hash
+3.Linear_probing
+3
+collision occured at 4
+ Enter your choice
+1.Quadratic_probing
+2.Double_hash
+3.Linear_probing
+3
+collision occured at 5
+ Enter your choice
+1.Quadratic_probing
+2.Double_hash
+3.Linear_probing
+3
+Element of Array are...
+2	21	45	23	54	25	12	87	62	89	 
+* 
+Enter the Number to be stored=
+21
+collision occured at 1
+ Enter your choice
+1.Quadratic_probing
+2.Double_hash
+3.Linear_probing
+2 
+collision occured at 3
+ Enter your choice
+1.Quadratic_probing
+2.Double_hash
+3.Linear_probing
+2
+collision occured at 1
+ Enter your choice
+1.Quadratic_probing
+2.Double_hash
+3.Linear_probing
+1
+collision occured at 0
+ Enter your choice
+1.Quadratic_probing
+2.Double_hash
+3.Linear_probing
+2
+collision occured at 4
+ Enter your choice
+1.Quadratic_probing
+2.Double_hash
+3.Linear_probing
+2
+collision occured at 9
+ Enter your choice
+1.Quadratic_probing
+2.Double_hash
+3.Linear_probing
+2 
+collision occured at 9
+ Enter your choice
+1.Quadratic_probing
+2.Double_hash
+3.Linear_probing
+2
+collision occured at 9
+ Enter your choice
+1.Quadratic_probing
+2.Double_hash
+3.Linear_probing
+2
+collision occured at 9
+ Enter your choice
+1.Quadratic_probing
+2.Double_hash
+3.Linear_probing
+2
+collision occured at 9
+ Enter your choice
+1.Quadratic_probing
+2.Double_hash
+3.Linear_probing
+2
+ Array is Full or collision Resolution not successful
+------------------
+(program exited with code: 0)
+Press return to continue
+*/		      
+			   
+
+
  

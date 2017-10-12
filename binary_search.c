@@ -1,3 +1,10 @@
+/*
+*description:Quick Sort
+*Author:khan heena
+*Roll no:16co04
+*/
+
+
 #include<stdio.h>
 #define MAX_SIZE 100
 
@@ -40,5 +47,25 @@
 			printf("element is on location=%d",ans);
 			return 0;
 		}
+
+/*****output*****
+enter the no of element8
+enter the element23
+56
+78
+98
+13
+68
+09
+34
+enter the element to be search13
+element is on location=4
+
+------------------
+(program exited with code: 0)
+Press return to continue
+
+
+*/
 
 
