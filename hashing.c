@@ -1,5 +1,5 @@
 /*
-*description:Quick Sort
+*description:hashing
 *Author:khan heena
 *Roll no:16co04
 */

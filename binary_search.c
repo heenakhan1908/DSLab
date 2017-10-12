@@ -1,5 +1,5 @@
 /*
-*description:Quick Sort
+*description:binary search
 *Author:khan heena
 *Roll no:16co04
 */
