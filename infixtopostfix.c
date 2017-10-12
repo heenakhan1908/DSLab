@@ -106,7 +106,7 @@ char pop(stack *s)
     }
 }
 /*
-ENTER INFIX EXPRESSION
+ *  ENTER INFIX EXPRESSION
 a*(b+C)/d
 stack is empty
 
@@ -120,4 +120,3 @@ Press return to continue
 
 
 */
-
